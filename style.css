@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(20, 133, 133);
+}
+.input-cont {
+  width: 70%;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+}
+input {
+  height: 20px;
+  width: 40%;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 16px;
+}
+button {
+  width: 70px;
+  cursor: pointer;
+  outline: none;
+}
+@media (max-width: 425px) {
+  .input-cont {
+    width: 95%;
+  }
+  input {
+    width: 50%;
+  }
+}
+.main-cont {
+  margin: 0 auto;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.status-cont {
+  width: 300px;
+  min-height: 300px;
+  margin: 0 5px 20px;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px -6px #000000;
+}
+@media (max-width: 768px) {
+  .main-cont {
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+#inProgress h2 {
+  background-color: orange;
+}
+#onHold h2 {
+  background-color: red;
+}
+#inReview h2 {
+  background-color: yellow;
+}
+#approved h2 {
+  background-color: green;
+}
+
+h2 {
+  background-color: royalblue;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+}
+
+.task {
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+  padding: 20px 10px;
+  border-bottom: 1px solid rgb(153, 153, 153);
+  color: gray;
+  font-size: 20px;
+  text-transform: capitalize;
+}
