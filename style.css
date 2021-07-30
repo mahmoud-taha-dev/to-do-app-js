@@ -1,12 +1,15 @@
 body {
   background-color: rgb(20, 133, 133);
+  font-family: "Roboto", sans-serif;
 }
+
 .input-cont {
   width: 70%;
   margin: 60px auto;
   display: flex;
   justify-content: center;
 }
+
 input {
   height: 20px;
   width: 40%;
@@ -14,10 +17,14 @@ input {
   outline: none;
   font-size: 16px;
 }
+
 button {
   width: 70px;
   cursor: pointer;
   outline: none;
+}
+.uppateBtn {
+  display: none;
 }
 @media (max-width: 425px) {
   .input-cont {
@@ -27,6 +34,7 @@ button {
     width: 50%;
   }
 }
+
 .main-cont {
   margin: 0 auto;
   display: flex;
@@ -58,7 +66,7 @@ button {
 #inReview h2 {
   background-color: yellow;
 }
-#approved h2 {
+#completed h2 {
   background-color: green;
 }
 
@@ -68,14 +76,38 @@ h2 {
   text-align: center;
   padding: 15px;
 }
-
+.info {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+}
 .task {
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   margin: 0;
+  font-weight: 400;
   padding: 20px 10px;
   border-bottom: 1px solid rgb(153, 153, 153);
-  color: gray;
-  font-size: 20px;
+  color: rgb(110, 109, 109);
+  font-size: 18px;
   text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+}
+.task p {
+  margin: 0;
+}
+.task:hover {
+  color: #fff;
+  background-color: rgb(9, 54, 54);
+}
+i {
+  margin: 0 5px;
+  font-size: 15px;
+}
+.fa-edit:hover {
+  color: green;
+}
+.fa-trash:hover {
+  color: red;
 }
