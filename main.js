@@ -65,6 +65,7 @@ const handleDeleteIcon = (id) => {
   tasks = tasks.filter((task) => task.id !== id);
   localStorage.setItem("tasks", JSON.stringify(tasks));
   document.getElementById(id).remove();
+  handleBtnAction();
 };
 
 const dragoverFunction = (e) => {
@@ -80,9 +81,16 @@ const dropFunction = (e) => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
+const handleBtnAction = () => {
+  btnAction = "add";
+  addBtn.textContent = "Add";
+  input.value = "";
+};
+
 const deleteTasks = () => {
   localStorage.removeItem("tasks");
   document.querySelectorAll(".task").forEach((item) => item.remove());
+  handleBtnAction();
 };
 
 tasks.length &&
@@ -96,9 +104,7 @@ containers.forEach((item) => {
 const handleAddBtn = () => {
   input.value && btnAction === "add" && addTask(input.value);
   input.value && btnAction === "update" && updateTask(input.value);
-  btnAction = "add";
-  addBtn.textContent = "Add";
-  input.value = "";
+  handleBtnAction();
 };
 
 addBtn.addEventListener("click", handleAddBtn);
